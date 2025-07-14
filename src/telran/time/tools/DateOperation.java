@@ -18,6 +18,14 @@ public class DateOperation {
 
     public static String[] sortStringDates(String[] dates) {
         // TODO
+        String[] res = Arrays.copyOf(dates,dates.length);
+        Arrays.sort(res,(a, b)->{return parseDate(a).compareTo(parseDate(b));});
+        return res;
+    }
+
+/*
+    public static String[] sortStringDates(String[] dates) {
+        // TODO
         int length = dates.length;
         LocalDateAndFormat[] newDates = new LocalDateAndFormat[length];
         String[] res = new String[length];
@@ -30,6 +38,8 @@ public class DateOperation {
         }
         return res;
     }
+    
+ */
 
     private static LocalDate parseDate(String strDate){
         DateTimeFormatter df = DateTimeFormatter
