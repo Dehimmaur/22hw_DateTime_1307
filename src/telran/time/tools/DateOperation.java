@@ -19,7 +19,7 @@ public class DateOperation {
     public static String[] sortStringDates(String[] dates) {
         // TODO
         String[] res = Arrays.copyOf(dates,dates.length);
-        Arrays.sort(res,(a, b)->{return parseDate(a).compareTo(parseDate(b));});
+        Arrays.sort(res,(a, b)->(parseDate(a).compareTo(parseDate(b))));
         return res;
     }
 
